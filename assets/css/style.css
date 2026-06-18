@@ -1,0 +1,730 @@
+/* ================================================
+   GLOBAL STYLES
+================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #F4F7EA;
+    color: #4a4458;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================================================
+   LAYOUT UTAMA
+================================================ */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================================================
+   SIDEBAR
+================================================ */
+.sidebar {
+    width: 230px;
+    background: #ffffff;
+    border-right: 1px solid #E2D9E2;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 8px 24px;
+    border-bottom: 1px solid #E2D9E2;
+    margin-bottom: 20px;
+}
+
+.avatar-large {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9580D4, #75ADC9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    overflow: hidden;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a4458;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-email {
+    font-size: 11px;
+    color: #a89bb5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.sidebar-menu {
+    list-style: none;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin-bottom: 4px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a7f9e;
+    transition: all 0.2s;
+}
+
+.sidebar-menu a:hover {
+    background: #E2D9E2;
+    color: #4a4458;
+}
+
+.sidebar-menu a.active {
+    background: #9580D4;
+    color: #fff;
+}
+
+.sidebar-menu .icon {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #E2D9E2;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c97a7a;
+    padding: 10px 12px;
+    border-radius: 12px;
+}
+
+.logout-link:hover {
+    background: #fbeaea;
+}
+
+.sidebar-brand {
+    font-family: 'Fredoka', sans-serif; /* Menggunakan font bermodel */
+    font-size: 20px;
+    color: #4a4458;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px 16px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+/* ================================================
+   LOGO STYLES
+================================================ */
+.brand-icon {
+    background: #9580D4;
+    color: #ffffff;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ================================================
+   MAIN CONTENT
+================================================ */
+.main-content {
+    flex: 1;
+    padding: 28px 36px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: #a89bb5;
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 4px;
+    color: #4a4458;
+}
+
+.btn-primary {
+    background: #9580D4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #8a7f9e;
+    border: 1px solid #E2D9E2;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background: #fbeaea;
+    color: #c97a7a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ================================================
+   STAT CARDS (DASHBOARD)
+================================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 1px 6px rgba(149, 128, 212, 0.08);
+}
+
+.stat-card .label {
+    font-size: 13px;
+    color: #a89bb5;
+    margin-bottom: 8px;
+}
+
+.stat-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a4458;
+}
+
+.stat-card .icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* ================================================
+   CARD BOX UMUM
+================================================ */
+.card-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 1px 6px rgba(149, 128, 212, 0.08);
+}
+
+/* ================================================
+   TO DO LIST
+================================================ */
+.todo-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.todo-tab {
+    padding: 8px 18px;
+    border-radius: 99px;
+    border: 1px solid #E2D9E2;
+    font-size: 13px;
+    cursor: pointer;
+    background: #fff;
+    color: #8a7f9e;
+}
+
+.todo-tab.active {
+    background: #9580D4;
+    color: #fff;
+    border-color: #9580D4;
+}
+
+.todo-item {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 6px rgba(149, 128, 212, 0.06);
+    border-left: 4px solid #9580D4;
+}
+
+.todo-item.selesai {
+    opacity: 0.6;
+}
+
+.todo-item.selesai .todo-title {
+    text-decoration: line-through;
+}
+
+.todo-checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #CDB9DD;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.todo-checkbox.checked {
+    background: #9580D4;
+    border-color: #9580D4;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4a4458;
+    margin-bottom: 4px;
+}
+
+.todo-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #a89bb5;
+    align-items: center;
+}
+
+.badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+    color: #fff;
+    display: inline-block;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.todo-actions a {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.action-edit { background: #E2D9E2; color: #6b5d7a; }
+.action-delete { background: #fbeaea; color: #c97a7a; }
+
+/* ================================================
+   HABIT TRACKER
+================================================ */
+.habit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.habit-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 1px 6px rgba(149, 128, 212, 0.08);
+    text-align: center;
+}
+
+.habit-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 12px;
+}
+
+.habit-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #4a4458;
+}
+
+.habit-streak {
+    font-size: 12px;
+    color: #a89bb5;
+    margin-bottom: 14px;
+}
+
+.habit-check-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #E2D9E2;
+    color: #6b5d7a;
+}
+
+.habit-check-btn.checked {
+    background: #9580D4;
+    color: #fff;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* ================================================
+   DIARY
+================================================ */
+.diary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.diary-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 1px 6px rgba(149, 128, 212, 0.08);
+}
+
+.diary-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.diary-mood {
+    font-size: 24px;
+}
+
+.diary-date {
+    font-size: 12px;
+    color: #a89bb5;
+}
+
+.diary-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4a4458;
+    margin-bottom: 8px;
+}
+
+.diary-text {
+    font-size: 13px;
+    color: #8a7f9e;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.diary-photo {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.diary-actions {
+    display: flex;
+    gap: 6px;
+}
+
+/* ================================================
+   FORM / MODAL
+================================================ */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #6b5d7a;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #E2D9E2;
+    border-radius: 12px;
+    font-size: 14px;
+    background: #fff;
+    color: #4a4458;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9580D4;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(74, 68, 88, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4a4458;
+}
+
+.modal-close {
+    float: right;
+    cursor: pointer;
+    color: #a89bb5;
+    font-size: 20px;
+}
+
+/* ================================================
+    LOGIN / REGISTER PAGE (SPLIT CONTAINER STYLE)
+================================================ */
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+.auth-container {
+    display: flex;
+    background: #ffffff;
+    border-radius: 24px;
+    width: 840px;
+    min-height: 540px;
+    box-shadow: 0 12px 40px rgba(74, 68, 88, 0.1);
+    overflow: hidden;
+}
+
+/* Sisi Kiri: Banner Gradien Visual */
+.auth-banner {
+    flex: 1.1;
+    background: radial-gradient(circle at 10% 20%, #75ADC9 0%, #9580D4 90%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    position: relative;
+}
+
+.banner-logo {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.banner-sub {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.banner-main {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+/* Sisi Kanan: Form Konten */
+.auth-form-content {
+    flex: 1;
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-header-logo {
+    display: none; /* Hanya muncul di layar kecil / HP */
+    font-size: 28px;
+    color: #9580D4;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4a4458;
+    margin-bottom: 6px;
+}
+
+.auth-sub {
+    font-size: 13px;
+    color: #a89bb5;
+    margin-bottom: 24px;
+}
+
+/* Tombol Biru Terang Sesuai Gambar Referensi */
+.btn-primary-auth {
+    width: 100%;
+    background: #4A3AFF; /* Warna tombol utama ungu kebiruan cerah */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(74, 58, 255, 0.25);
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-primary-auth:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 24px;
+    color: #8a7f9e;
+}
+
+.auth-footer a {
+    color: #4A3AFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Penyesuaian Responsif HP agar tidak hancur */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+    .auth-banner {
+        display: none; /* Sembunyikan banner jika di HP agar ringkas */
+    }
+    .auth-header-logo {
+        display: block;
+    }
+    .auth-form-content {
+        padding: 32px 24px;
+    }
+}
+
+/* ================================================
+   RESPONSIVE
+================================================ */
+@media (max-width: 900px) {
+    .app-wrapper { flex-direction: column; }
+    .sidebar { width: 100%; flex-direction: row; overflow-x: auto; }
+    .stats-grid, .habit-grid, .diary-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+}

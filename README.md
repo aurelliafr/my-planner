@@ -81,7 +81,7 @@ Aplikasi ini dibuat untuk menyelesaikan masalah utama dalam manajemen kehidupan 
 
 ## Informasi Akses Website
 
-Apabila URL utama mengalami peringatan keamanan pada browser tertentu (khususnya Safari/iOS), website dapat diakses langsung melalui:
+Apabila URL utama https://myplanner.great-site.net mengalami peringatan keamanan pada browser tertentu (khususnya Safari/iOS), website dapat diakses langsung melalui:
 
 https://myplanner.great-site.net/login.php
 

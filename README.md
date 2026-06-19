@@ -79,6 +79,14 @@ Aplikasi ini dibuat untuk menyelesaikan masalah utama dalam manajemen kehidupan 
 |---|---|
 | aurellia@gmail.com | password |
 
+## Informasi Akses Website
+
+Apabila URL utama mengalami peringatan keamanan pada browser tertentu (khususnya Safari/iOS), website dapat diakses langsung melalui:
+
+https://myplanner.great-site.net/login.php
+
+Aplikasi, database, dan seluruh fitur tetap berjalan normal. Perbedaan akses tersebut disebabkan oleh kebijakan keamanan browser terhadap domain hosting gratis yang digunakan.
+
 ## Catatan
 
 - Seluruh fitur CRUD (Create, Read, Update, Delete) pada modul To Do List, Habit Tracker, dan Diary telah diimplementasikan secara penuh dan berfungsi.
